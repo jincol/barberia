@@ -1,0 +1,24 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.contenido-resumen {
+    p {}
+
+    span {
+        color: v.$azul;
+        font-weight: v.$bold;
+        font-size: 1.5rem;
+    }
+
+   
+}
+
+.contenedor-servicio {
+    border-bottom: 1px solid v.$gris;
+    padding: 1rem 0;
+
+    &:last-of-type{
+        margin-bottom: 2rem ;
+    }
+}   

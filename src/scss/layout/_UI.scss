@@ -1,0 +1,82 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app {
+
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+
+    .imagen {
+        height: 20rem;
+        background-image: url(../img/1.jpg);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+        @include m.tablet {
+            height: auto;
+        }
+
+
+    }
+
+    .app {
+        width: 95%;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+
+
+        @include m.tablet {
+            overflow-y: scroll;
+
+            scrollbar-color: v.$azul #1a1b15;
+            scrollbar-width: 100px;
+        }
+
+       
+
+        .cs {
+            background-color: v.$negro;
+            border-radius: 1rem;
+            margin: 0;
+            -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 1);
+            box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 1);
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            height: fit-content;
+        }
+
+
+        .access {
+            text-align: center;
+
+            @include m.tablet {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+
+}
+
+.barra-servicios{
+    margin-top: v.$separacion / 2;
+
+    @include m.tablet{
+        display: flex;
+        justify-content:space-between;
+        
+    }
+
+    .boton{
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+    }
+}
